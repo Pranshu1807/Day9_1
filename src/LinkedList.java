@@ -70,6 +70,16 @@ public class LinkedList {
         }
     }
 
+    public void insertAfter(int valueTobeAdded, int value) {
+        int find = this.find(value);
+        if (find == -1) {
+            System.out.println("Node not found");
+            return;
+        } else {
+            this.insertAtPosition(find + 1, valueTobeAdded);
+        }
+    }
+
     public void deleteByPosition(int pos) {
         if (pos < 0 || pos >= this.length()) {
             System.out.println("Index out of bounds");
