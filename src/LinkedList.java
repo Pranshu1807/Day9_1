@@ -69,4 +69,31 @@ public class LinkedList {
             node.next = nextNode;
         }
     }
+
+    public void deleteByPosition(int pos) {
+        if (pos < 0 || pos >= this.length()) {
+            System.out.println("Index out of bounds");
+            return;
+        }
+        if (pos == 0) {
+            head = head.next;
+        } else {
+            Node temp = head;
+            int i = 0;
+            while ((i + 1) < pos) {
+                temp = temp.next;
+                i++;
+            }
+            temp.next = temp.next.next;
+        }
+    }
+
+    public void deleteByValue(int value) {
+        int pos = find(value);
+        if (pos == -1) {
+            System.out.println("This value doesn't exist in Linked List");
+            return;
+        }
+        deleteByPosition(pos);
+    }
 }
