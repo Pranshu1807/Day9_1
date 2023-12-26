@@ -96,4 +96,8 @@ public class LinkedList {
         }
         deleteByPosition(pos);
     }
+
+    public void pop() {
+        deleteByPosition(0);
+    }
 }
