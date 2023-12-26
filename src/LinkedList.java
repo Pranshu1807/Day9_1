@@ -100,4 +100,8 @@ public class LinkedList {
     public void pop() {
         deleteByPosition(0);
     }
+
+    public void popLast() {
+        deleteByPosition(this.length() - 1);
+    }
 }

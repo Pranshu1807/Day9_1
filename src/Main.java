@@ -5,7 +5,7 @@ public class Main {
         L1.add(70);
         L1.insertAtPosition(1, 30);
         L1.display();
-        L1.pop();
+        L1.popLast();
         L1.display();
     }
 }
